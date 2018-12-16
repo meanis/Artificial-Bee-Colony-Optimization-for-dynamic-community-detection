@@ -1,0 +1,13 @@
+nb_s:50
+nb_cycles:50
+limit_cycles:20
+employed_bees_percentage:0.5
+T0:10
+Tmin:1
+alpha:0.5
+cycles_per_t:3
+gamma:1
+sigma:0
+delta:0.2
+snapshot_step:10
+snapshot_overlap:2
