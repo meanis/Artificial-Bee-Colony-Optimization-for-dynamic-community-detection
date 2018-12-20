@@ -150,10 +150,11 @@ class mobcsa(object):
 
         for i in chosen_indexes:
             try:
-                new_solution[i] = rand.choice(list(self.snapshot[i]))
+                #new_solution[i] = rand.choice(list(self.snapshot[i]))
+                new_solution[i] = rand.choices(list(self.snapshot[i]), self.pearson_correlation[i])[0]
             except IndexError:
                 new_solution[i] = i
-            #new_solution[i] = rand.choices(list(self.snapshot[i]), self.pearson_correlation[i])[0]
+            
 
         return food_source(new_solution, self.cost(new_solution))
 
@@ -187,11 +188,12 @@ class mobcsa(object):
 
         for i in range(0, n):
             try:
-                solution.append(rand.choice(list(self.snapshot[i])))
+                #solution.append(rand.choice(list(self.snapshot[i])))
+                solution.append(rand.choices(list(self.snapshot[i]), self.pearson_correlation[i])[0])
             except IndexError:
                 solution.append(i)
         
-        #solution = [rand.choices(list(self.snapshot[i]), self.pearson_correlation[i])[0] for i in range(n)]
+        
         
         cost = self.cost(solution)
 
