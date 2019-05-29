@@ -5,7 +5,7 @@ class food_source(object):
         super(food_source, self).__init__()
 
         self.trials = 0
-        
+
         self.solution = initial_solution
         self.cost = initial_cost
 

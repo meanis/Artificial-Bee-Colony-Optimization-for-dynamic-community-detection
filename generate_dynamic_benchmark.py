@@ -1,9 +1,9 @@
-import rdyn
+from rdyn import RDyn
 import sys
 
 def main(argv):
-    
-    gen = rdyn.RDyn()
+
+    gen = RDyn()
     gen.execute(simplified=True)
 
 if __name__ == '__main__':

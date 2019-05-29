@@ -27,7 +27,8 @@ def modularity(snapshot, community_structure):
     return q
 
 def NMI(A, B):
-
+    A = node_labeling(A)
+    B = node_labeling(B)
     return normalized_mutual_info_score(A, B)
 
 def pearson_correlation(snapshot):
@@ -51,3 +52,16 @@ def locus_decode(solution):
         g.add_edge(i, solution[i])
 
     return list(nx.connected_components(g))
+
+def node_labeling(solution):
+
+    labels = [0 for _ in range(len(solution))]
+    partition = locus_decode(solution)
+
+    label = 0
+    for community in partition:
+        for member in community:
+            labels[member] = label
+        label += 1
+
+    return labels
