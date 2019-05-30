@@ -11,7 +11,7 @@ def modularity(snapshot, community_structure):
     a = []
 
     for c in community_structure:
-        
+
         i = snapshot.subgraph(c).number_of_edges()
         e.append(i/m)
 
@@ -47,7 +47,7 @@ def locus_decode(solution):
 
     n = len(solution)
     g = nx.Graph()
-    
+
     for i in range(n):
         g.add_edge(i, solution[i])
 

@@ -49,8 +49,17 @@ class population_initializer(object):
         return food_source(solution, cost)
 
     def elite_selection(self):
-        #print(sorted((greedy_modularity_communities(self.snapshot))))
-        return None
+
+        solution = [ 0 for _ in range(0, self.snapshot.number_of_nodes()) ]
+
+        for c in greedy_modularity_communities(self.snapshot):
+            for node1 in c:
+                for node2 in c:
+                    if (node2 in self.snapshot[node1]):
+                        solution[node1] = node2
+        cost = self.cost(solution)
+
+        return food_source(solution, cost)
 
     def cost(self, solution):
 

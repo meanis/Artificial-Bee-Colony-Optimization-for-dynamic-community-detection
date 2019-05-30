@@ -32,7 +32,7 @@ def draw(snapshots, partitions, analysis_data):
         yMin = global_optimals[0]
         yMax = global_optimals[-1]
 
-        plt.text(5, yMax, 'Max Q: ' + str(yMax), style='oblique', bbox={'facecolor':'orange', 'alpha':0.5, 'pad':10})
+        plt.text(5, yMax, 'f: ' + str(yMax), style='oblique', bbox={'facecolor':'orange', 'alpha':0.5, 'pad':10})
         plt.axis([0, xMax + 1, yMin - 0.01, yMax + 0.01])
         plt.grid(True, which='both', axis='y')
         plt.show()

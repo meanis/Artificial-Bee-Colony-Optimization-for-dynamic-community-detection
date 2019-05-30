@@ -7,5 +7,5 @@ Tmin:100
 alpha:0.8
 cycles_per_t:5
 gamma:1
-sigma:0
+sigma:0.1
 delta:0.05

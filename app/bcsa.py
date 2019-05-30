@@ -7,9 +7,9 @@ import networkx as nx
 from food_source import food_source
 import functions as fun
 
-class mobcsa(object):
+class bcsa(object):
     def __init__(self, params):
-        super(mobcsa, self).__init__()
+        super(bcsa, self).__init__()
 
         ######################################################
 
