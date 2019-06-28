@@ -3,7 +3,7 @@ import sys
 
 def main(argv):
 
-    gen = RDyn()
+    gen = RDyn(size=200, iterations=200, avg_deg=4, sigma=.8)
     gen.execute(simplified=True)
 
 if __name__ == '__main__':

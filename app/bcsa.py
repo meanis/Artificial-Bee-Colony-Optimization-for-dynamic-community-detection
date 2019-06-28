@@ -52,7 +52,7 @@ class bcsa(object):
         }
 
         self.snapshot = snapshot
-        self.pearson_correlation = fun.pearson_correlation(self.snapshot)
+        #self.pearson_correlation = fun.pearson_correlation(self.snapshot)
 
         self.last_snapshot_community_structure = max(initial_population, key = attrgetter('cost')).solution
         self.population = self.repair_population(initial_population, self.snapshot)
@@ -149,8 +149,8 @@ class bcsa(object):
 
         for i in chosen_indexes:
             try:
-                #new_solution[i] = rand.choice(list(self.snapshot[i]))
-                new_solution[i] = rand.choices(list(self.snapshot[i]), self.pearson_correlation[i])[0]
+                new_solution[i] = rand.choice(list(self.snapshot[i]))
+                #new_solution[i] = rand.choices(list(self.snapshot[i]), self.pearson_correlation[i])[0]
             except IndexError:
                 new_solution[i] = i
 
@@ -186,8 +186,8 @@ class bcsa(object):
 
         for i in range(0, n):
             try:
-                #solution.append(rand.choice(list(self.snapshot[i])))
-                solution.append(rand.choices(list(self.snapshot[i]), self.pearson_correlation[i])[0])
+                solution.append(rand.choice(list(self.snapshot[i])))
+                #solution.append(rand.choices(list(self.snapshot[i]), self.pearson_correlation[i])[0])
             except IndexError:
                 solution.append(i)        
 

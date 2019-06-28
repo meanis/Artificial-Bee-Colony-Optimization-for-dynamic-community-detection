@@ -1,2 +1,3 @@
-Datasets/*
-__pycache__/*
+Datasets/**
+**/__pycache__/**
+results.csv

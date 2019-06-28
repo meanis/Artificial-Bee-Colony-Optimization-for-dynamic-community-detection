@@ -20,6 +20,7 @@ class population_initializer(object):
     def init_snapshot_pop(self, snapshot):
 
         self.snapshot = snapshot
+        #self.pearson_correlation = fun.pearson_correlation(self.snapshot)
 
         population = []
 

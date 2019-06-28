@@ -1,12 +1,12 @@
 nb_exec:1
 nb_s:100
 nb_cycles:50
-limit_cycles:15
+limit_cycles:10
 employed_bees_percentage:0.5
 T0:1000
 Tmin:100
-alpha:0.8
+alpha:0.6
 cycles_per_t:5
-gamma:1
-sigma:0.1
+gamma:0.8
+sigma:0
 delta:0.05

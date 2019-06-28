@@ -29,6 +29,8 @@ def modularity(snapshot, community_structure):
 def NMI(A, B):
     A = node_labeling(A)
     B = node_labeling(B)
+    if (len(A) < len(B)):
+        B = B[0:len(A)]
     return normalized_mutual_info_score(A, B)
 
 def pearson_correlation(snapshot):
